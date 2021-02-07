@@ -6,8 +6,9 @@ import Button from '../atoms/Button';
 import Feature from '../atoms/Feature';
 import Section from '../molecules/Section';
 import Grid from '../atoms/Grid';
+import Footer from '../organisms/Footer';
 import {FaCar, FaKey, FaMapMarkedAlt, FaAccessibleIcon} from 'react-icons/fa';
-
+import bmwVideo from '../../assets/bmw.mp4';
 //import PropTypes from "prop-types";
 
 const Home = () => {
@@ -52,6 +53,36 @@ const Home = () => {
                     </Feature>
                 </Grid>
             </Section>
+            <Section inverse={true}>
+                <Heading>
+                    <h2>Conheça nossos serviços</h2>
+                </Heading>
+            </Section>
+            <Section>
+                <Grid md={2}>
+                    <div>
+                        <Heading>
+                            <h2>Carrara auto escola</h2>
+                        </Heading>
+                        <p>
+                        Lorem ipsum dolor sit amed, consectetur adipiscing elit, sed do eiusmod tempor.Lorem ipsum dolor sit amed, consectetur adipiscing elit, sed do eiusmod tempor.Lorem ipsum dolor sit amed, consectetur adipiscing elit, sed do eiusmod tempor.Lorem ipsum dolor sit amed, consectetur adipiscing elit, sed do eiusmod tempor.
+                        </p>
+                        <div>
+                            <Button color="primary">saiba mais</Button>
+                        </div>
+                    </div>
+                    <div>
+                        <video src={bmwVideo} width="100%" autoPlay loop/>
+                    </div>
+                </Grid>
+                
+            </Section>
+            <Section inverse={true}>
+                <Heading>
+                    <h2>Duvidas recorrentes</h2>
+                </Heading>
+            </Section>
+            <Footer/>
         </>
     )
 }
