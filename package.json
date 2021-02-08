@@ -6,6 +6,7 @@
     "@storybook/addon-docs": "^6.1.16",
     "@storybook/addon-knobs": "^6.1.16",
     "@storybook/addon-viewport": "^6.1.16",
+    "@svgr/cli": "^5.5.0",
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
@@ -25,7 +26,8 @@
     "cover": "yarn test -- --coverage --watchAll=false",
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 6006 -s public",
-    "build-storybook": "build-storybook -s public"
+    "build-storybook": "build-storybook -s public",
+    "svg": "svgr --icon --replace-attr-values '#ffc107=currentColor' -d src/draws/"
   },
   "eslintConfig": {
     "extends": [

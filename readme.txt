@@ -38,3 +38,7 @@ pacotes utilizados
     ->styled-components, para fazer um uso adequado do css no javascript
     ->react-helmet, para fazer importação de links
 
+pacotes de manipulação de svg
+@svgr/cli, é usado para manipular svg
+depois adiciona o script "svg": "svgr --icon --replace-attr-values '#ffc107=currentColor' -d src/draws/"
+para usar basta yarn svg <nome do arquivo>
