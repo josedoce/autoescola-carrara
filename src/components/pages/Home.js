@@ -7,9 +7,10 @@ import Feature from '../atoms/Feature';
 import Section from '../molecules/Section';
 import Grid from '../atoms/Grid';
 import Footer from '../organisms/Footer';
+import ProductGrid from '../organisms/ProductGrid';
 import {FaCar, FaKey, FaMapMarkedAlt, FaAccessibleIcon} from 'react-icons/fa';
 import bmwVideo from '../../assets/bmw.mp4';
-//import PropTypes from "prop-types";
+import { produto } from './db';
 
 const Home = () => {
     return(
@@ -56,6 +57,7 @@ const Home = () => {
             <Section inverse={true}>
                 <Heading>
                     <h2>Conheça nossos serviços</h2>
+                    <ProductGrid products={produto}/>
                 </Heading>
             </Section>
             <Section>
@@ -86,10 +88,5 @@ const Home = () => {
         </>
     )
 }
-// Home.defaultProps = {
 
-// };
-// Home.propTypes = {
-
-// };
 export default Home;
