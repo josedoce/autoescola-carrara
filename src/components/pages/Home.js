@@ -8,6 +8,7 @@ import Section from '../molecules/Section';
 import Grid from '../atoms/Grid';
 import Footer from '../organisms/Footer';
 import ProductGrid from '../organisms/ProductGrid';
+import Accordion,{AccordionGroup} from '../atoms/Accordion';
 import {FaCar, FaKey, FaMapMarkedAlt, FaAccessibleIcon} from 'react-icons/fa';
 import bmwVideo from '../../assets/bmw.mp4';
 import { produto } from './db';
@@ -83,6 +84,17 @@ const Home = () => {
                 <Heading>
                     <h2>Duvidas recorrentes</h2>
                 </Heading>
+               <AccordionGroup>
+                    <Accordion title="Como eu renovo minha CNH?">
+                        Lorem ipsum dolor sit amed, consectetur adipiscing elit, sed do eiusmod tempor.Lorem ipsum dolor sit amed, consectetur adipiscing elit, sed do eiusmod tempor.Lorem ipsum dolor sit amed, consectetur adipiscing elit, sed do eiusmod tempor.
+                    </Accordion>
+                    <Accordion title="Como faço a mudança de categória?">
+                        Lorem ipsum dolor sit amed, consectetur adipiscing elit, sed do eiusmod tempor.Lorem ipsum dolor sit amed, consectetur adipiscing elit, sed do eiusmod tempor.Lorem ipsum dolor sit amed, consectetur adipiscing elit, sed do eiusmod tempor.
+                    </Accordion>
+                    <Accordion title="Fui multado, e agora?">
+                        Lorem ipsum dolor sit amed, consectetur adipiscing elit, sed do eiusmod tempor.Lorem ipsum dolor sit amed, consectetur adipiscing elit, sed do eiusmod tempor.Lorem ipsum dolor sit amed, consectetur adipiscing elit, sed do eiusmod tempor.
+                    </Accordion>
+               </AccordionGroup>
             </Section>
             <Footer/>
         </>
