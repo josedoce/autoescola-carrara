@@ -27,20 +27,47 @@ CardBody.propTypes = {
 
 //#region CardMedia
 const StyleMedia = styled.div`
+    display: flex;
     background-image: url(${props=>props.image});
     background-position: center center;
     background-size: cover;
     height: 270px;
 `;
 
-export const CardMedia = ({image}) =>(
-    <StyleMedia image={image}/>
+export const CardMedia = ({image, children}) =>(
+    <StyleMedia image={image}>{children}</StyleMedia>
 );
 CardMedia.defaultProps = {
     image: undefined
 };
 CardMedia.propTypes = {
     image: PropTypes.string
+};
+//#endregion
+
+//#region CardMediaDescription
+const StyleMediaDescription = styled.div`
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 8px 16px;
+    color: #fff;
+    align-self: flex-end;
+    flex: 1;
+    h1,h2,h3,h4,h5,h6{
+        margin: 0;
+    }
+`;
+
+export const CardMediaDescription = ({children}) =>(
+    <StyleMediaDescription>
+        {children}
+    </StyleMediaDescription>
+
+);
+CardMediaDescription.defaultProps = {
+    children: undefined
+};
+CardMediaDescription.propTypes = {
+    children: PropTypes.node
 };
 //#endregion
 

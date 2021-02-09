@@ -9,6 +9,9 @@ import Grid from '../atoms/Grid';
 import Section from '../molecules/Section';
 import Footer from '../organisms/Footer';
 import DrawCar from '../../draws/Undraw';
+import Card,{CardMedia, CardMediaDescription} from '../atoms/Card';
+import {instrutores} from '../../assets/instrutores';
+
 const ImageContainer = styled.div`
     svg{
         width: 100%;
@@ -20,6 +23,7 @@ const ImageContainer = styled.div`
 
 const About = () => {
     return(
+        
         <>
             <Hero image={car1}>
                 <Heading>
@@ -74,6 +78,17 @@ const About = () => {
                 <Heading>
                     <h2>Conheça nossos professores</h2>
                 </Heading>
+                <Grid sm={2} md={3} lg={4}>
+                    {instrutores.map((instrutor)=>(
+                        <Card key={instrutor.id}>
+                            <CardMedia image={instrutor.img}>
+                                <CardMediaDescription>
+                                    <h5>{instrutor.nome}</h5>
+                                </CardMediaDescription>
+                            </CardMedia>
+                        </Card>
+                    ))}
+                </Grid>
             </Section>
             <Footer/>
         </>
