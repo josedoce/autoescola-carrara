@@ -5,6 +5,7 @@ import {
     FaHome,
     FaScroll
 } from 'react-icons/fa';
+import {useScrollToTop} from '../../hooks/MyHooks';
 
 import Callout,{CalloutMedia, CalloutActions,CalloutBody} from '../atoms/Callout';
 import Hero from '../molecules/Hero';
@@ -15,6 +16,13 @@ import Section from '../molecules/Section';
 import Footer from '../organisms/Footer';
 import Button from '../atoms/Button';
 import Speed from '../../draws/Speed';
+import BreadCrumb from '../atoms/BreadCrumb';
+
+const items = [
+    {label: "Inicio", link: "/"},
+    {label: "Servicos"},
+    {label: "Nome do Serviço"}
+];
 
 const PinnedList = styled.ul`
     list-style: none;
@@ -34,11 +42,13 @@ const PinnedItem = styled.li`
 `;
 
 const ProductDetails = () => {
+    useScrollToTop();
     return(
         <>
             <Hero image={car1}>
                 <Heading>
                     <h1>Nome do serviço</h1>
+                    <BreadCrumb items={items}/>
                 </Heading>
             </Hero>
             <Section>

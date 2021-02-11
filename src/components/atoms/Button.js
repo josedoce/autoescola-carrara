@@ -70,12 +70,14 @@ const Button = styled.button`
   background-color: ${getMainColor};
   border: 2px solid ${getMainColor};
   color: ${getColorText};
-
+  display: inline-block;
+  text-decoration: none;
+  margin-right: 18px;
   &:disabled{
     opacity: 0.6;
     cursor: not-allowed;
   }
-  &:hover:enabled{ /**so aplica o hover se tiver habilitado */
+  &:hover:not(:disabled){ /**so aplica o hover se tiver habilitado */
     background-color: ${getDarkColor};
     border-color: 1px solid ${getDarkColor};
   }
@@ -84,7 +86,7 @@ const Button = styled.button`
 const ButtonOutlined = styled(Button)`
   background-color: transparent;
   color: ${getOutlinedColor};
-  &:hover:enabled {
+  &:hover:not(:disabled){
     background-color: transparent;
     color: ${getDarkColor};
   }
@@ -96,7 +98,7 @@ const ButtonLink = styled(Button)`
   padding-left: 0;
   padding-right: 0;
 
-  &:hover:enabled {
+  &:hover:not(:disabled){
     background-color: transparent;
     border-color: transparent;
     color: ${getDarkColor};
@@ -118,7 +120,7 @@ const ButtonWrapper = (props) => {
         return <ButtonLink {...props}/>
       default:
         return <Button {...props} />};
-    }
+}
 
 //aqui define as propriedades padrão do component
 ButtonWrapper.defaultProps = {

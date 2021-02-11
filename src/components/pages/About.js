@@ -1,6 +1,7 @@
 import React from "react";
 import styled from 'styled-components';
 import PropTypes from "prop-types";
+import {useScrollToTop} from '../../hooks/MyHooks';
 
 import Hero from '../molecules/Hero';
 import Heading from '../atoms/Heading';
@@ -9,8 +10,14 @@ import Grid from '../atoms/Grid';
 import Section from '../molecules/Section';
 import Footer from '../organisms/Footer';
 import DrawCar from '../../draws/Undraw';
+import BreadCrumb from '../atoms/BreadCrumb';
 import Card,{CardMedia, CardMediaDescription} from '../atoms/Card';
 import {instrutores} from '../../assets/instrutores';
+
+const items = [
+    {label: "Inicio", link: "/"},
+    {label: "Sobre"}
+];
 
 const ImageContainer = styled.div`
     svg{
@@ -22,12 +29,13 @@ const ImageContainer = styled.div`
 `;
 
 const About = () => {
-    return(
-        
+    useScrollToTop();
+    return(    
         <>
             <Hero image={car1}>
                 <Heading>
                     <h1>Auto Escola Carrara</h1>
+                    <BreadCrumb items={items}/>
                 </Heading>
             </Hero>
             <Section>

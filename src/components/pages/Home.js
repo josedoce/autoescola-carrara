@@ -1,4 +1,5 @@
 import React from "react";
+import {Link} from 'react-router-dom';
 import Hero from '../molecules/Hero';
 import Car1 from '../../stories/assets/car1.jpg';
 import Heading from '../atoms/Heading';
@@ -71,7 +72,8 @@ const Home = () => {
                         Lorem ipsum dolor sit amed, consectetur adipiscing elit, sed do eiusmod tempor.Lorem ipsum dolor sit amed, consectetur adipiscing elit, sed do eiusmod tempor.Lorem ipsum dolor sit amed, consectetur adipiscing elit, sed do eiusmod tempor.Lorem ipsum dolor sit amed, consectetur adipiscing elit, sed do eiusmod tempor.
                         </p>
                         <div>
-                            <Button color="primary">saiba mais</Button>
+                            {/* para usar o botao como button link, basta usar a a propriedade as */}
+                            <Button as={Link} to="/sobre" color="primary">saiba mais</Button>
                         </div>
                     </div>
                     <div>

@@ -3,15 +3,17 @@ import {addDecorator, addParameters} from '@storybook/react';
 import {select} from '@storybook/addon-knobs';
 import GlobalStyle from '../src/styles/GlobalStyle';
 import ThemeProvider, {ThemeNames} from '../src/styles/ThemeProvider';
+//usando o roteamento no storybook
+import { MemoryRouter as Router} from 'react-router-dom';
 
 //para aplicar as regras a todos os componentes
 addDecorator(storyFn=>(
-  <>
+  <Router>
     <ThemeProvider theme={select('Theme',ThemeNames, ThemeNames.light)}>
       <GlobalStyle/>
       {storyFn()}
     </ThemeProvider>
-  </>
+  </Router>
 ))
 //configuração para testes de viewport
 const viewports = {
