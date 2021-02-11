@@ -1,4 +1,4 @@
-import Home from './components/pages/Home';
+import Roteamento from './Roteamento';
 import ThemeProvider from './styles/ThemeProvider';
 import GlobalStyle from './styles/GlobalStyle';
 
@@ -7,7 +7,7 @@ function App() {
       <ThemeProvider>
         {/* global style é responsavel por aplicar todos os estilos globais */}
         <GlobalStyle/> 
-          <Home/>
+          <Roteamento/>
       </ThemeProvider>
 
   );

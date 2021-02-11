@@ -1,5 +1,5 @@
 import React from "react";
-import Card,{CardBody, CardMedia} from "./Card";
+import Card,{CardBody, CardMedia, CardMediaDescription} from "./Card";
 import Section from '../../components/molecules/Section';
 import Heading from './Heading';
 import Button from './Button';
@@ -8,7 +8,7 @@ import carrinho from '../../assets/carrinho.jpg';
 const info = {
     title: "Components/Atoms/Card",
     component: Card,
-    subcomponents: { CardBody, CardMedia }
+    subcomponents: { CardBody, CardMedia, CardMediaDescription }
 }
 
 export default info;
@@ -46,6 +46,18 @@ export const withMedia = ()=>(
                     <Button variant="link" color="primary">Saiba mais</Button>
                 </div>
             </CardBody>
+        </Card>
+    </Section>
+);
+
+export const onlyImage = () => (
+    <Section inverse>
+        <Card>
+            <CardMedia image={carrinho}>
+                <CardMediaDescription>
+                    <h5>Descrição da imagem</h5>
+                </CardMediaDescription>
+            </CardMedia>
         </Card>
     </Section>
 );
