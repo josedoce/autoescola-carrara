@@ -3,7 +3,7 @@
 exports[`Renders with color primary and variant link 1`] = `
 <DocumentFragment>
   <button
-    class="sc-bdfBwQ sc-dlfnbm kzYLne iStTsS"
+    class="sc-bdfBwQ sc-dlfnbm bxASgN hOLtfl"
     color="primary"
     type="button"
   />
@@ -13,7 +13,7 @@ exports[`Renders with color primary and variant link 1`] = `
 exports[`Renders with color primary and variant outlined 1`] = `
 <DocumentFragment>
   <button
-    class="sc-bdfBwQ sc-gsTCUz kzYLne fqKVRQ"
+    class="sc-bdfBwQ sc-gsTCUz bxASgN fDxJhX"
     color="primary"
     type="button"
   />
@@ -23,7 +23,7 @@ exports[`Renders with color primary and variant outlined 1`] = `
 exports[`renders with color danger 1`] = `
 <DocumentFragment>
   <button
-    class="sc-bdfBwQ ekmbQa"
+    class="sc-bdfBwQ iTyPRZ"
     color="danger"
     type="button"
   />
@@ -33,7 +33,7 @@ exports[`renders with color danger 1`] = `
 exports[`renders with color default 1`] = `
 <DocumentFragment>
   <button
-    class="sc-bdfBwQ drdGNm"
+    class="sc-bdfBwQ dGswKV"
     color="default"
     type="button"
   />
@@ -43,7 +43,7 @@ exports[`renders with color default 1`] = `
 exports[`renders with color primary 1`] = `
 <DocumentFragment>
   <button
-    class="sc-bdfBwQ kzYLne"
+    class="sc-bdfBwQ bxASgN"
     color="primary"
     type="button"
   />
@@ -53,7 +53,7 @@ exports[`renders with color primary 1`] = `
 exports[`renders with variant default 1`] = `
 <DocumentFragment>
   <button
-    class="sc-bdfBwQ drdGNm"
+    class="sc-bdfBwQ dGswKV"
     color="default"
     type="button"
   />
@@ -63,7 +63,7 @@ exports[`renders with variant default 1`] = `
 exports[`renders with variant link 1`] = `
 <DocumentFragment>
   <button
-    class="sc-bdfBwQ sc-dlfnbm drdGNm gzhhnD"
+    class="sc-bdfBwQ sc-dlfnbm dGswKV ekDUII"
     color="default"
     type="button"
   />
@@ -73,7 +73,7 @@ exports[`renders with variant link 1`] = `
 exports[`renders with variant outlined 1`] = `
 <DocumentFragment>
   <button
-    class="sc-bdfBwQ sc-gsTCUz drdGNm lgAtkk"
+    class="sc-bdfBwQ sc-gsTCUz dGswKV MjndT"
     color="default"
     type="button"
   />
