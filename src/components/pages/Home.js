@@ -14,8 +14,7 @@ import {FaCar, FaKey, FaMapMarkedAlt, FaAccessibleIcon} from 'react-icons/fa';
 import bmwVideo from '../../assets/bmw.mp4';
 import { produto } from './db';
 
-const Home = () => {
-    return(
+const Home = () => (
         <>
             <Hero image={Car1}>
                 <Heading>
@@ -100,7 +99,6 @@ const Home = () => {
             </Section>
             <Footer/>
         </>
-    )
-}
+);
 
 export default Home;

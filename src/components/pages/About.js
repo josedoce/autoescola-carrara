@@ -1,7 +1,5 @@
 import React from "react";
 import styled from 'styled-components';
-import PropTypes from "prop-types";
-import {useScrollToTop} from '../../hooks/MyHooks';
 
 import Hero from '../molecules/Hero';
 import Heading from '../atoms/Heading';
@@ -28,9 +26,7 @@ const ImageContainer = styled.div`
     }
 `;
 
-const About = () => {
-    useScrollToTop();
-    return(    
+const About = () => (    
         <>
             <Hero image={car1}>
                 <Heading>
@@ -100,12 +96,6 @@ const About = () => {
             </Section>
             <Footer/>
         </>
-    )
-}
-About.defaultProps = {
+);
 
-};
-About.propTypes = {
-
-};
 export default About;

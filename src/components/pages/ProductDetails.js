@@ -5,7 +5,6 @@ import {
     FaHome,
     FaScroll
 } from 'react-icons/fa';
-import {useScrollToTop} from '../../hooks/MyHooks';
 
 import Callout,{CalloutMedia, CalloutActions,CalloutBody} from '../atoms/Callout';
 import Hero from '../molecules/Hero';
@@ -41,9 +40,7 @@ const PinnedItem = styled.li`
     }
 `;
 
-const ProductDetails = () => {
-    useScrollToTop();
-    return(
+const ProductDetails = () => (
         <>
             <Hero image={car1}>
                 <Heading>
@@ -95,7 +92,6 @@ const ProductDetails = () => {
             </Section>
             <Footer/>
         </>
-    )
-}
+);
 
 export default ProductDetails;

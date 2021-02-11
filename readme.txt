@@ -53,3 +53,7 @@ Custom hook
 
 Testes
     Teste de fumaça/smoke test
+
+
+Rotas componentizadas
+    Na pasta de rotas ficará as regras de negocio da aplicação(a logica)
