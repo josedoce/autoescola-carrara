@@ -14,7 +14,7 @@ const Item = styled.span`
     font-weight: 300;
     text-decoration: none;
     color: #fff;
-    ${(props)=>props.isClickable && css`
+    ${(props)=>props.to && css`
         cursor: pointer;
         &:hover{
             color: ${(props)=>props.theme.colors.primary.main};   
@@ -33,7 +33,7 @@ const BreadCrumb = ({items}) => {
     return(
         <Root>
              {items.map((item)=>(
-                 <Item key={item.label} as={item.link && Link} to={item.link} isClickable={!!item.link}>
+                 <Item key={item.label} as={item.link && Link} to={item.link}>
                      {item.label}
                  </Item>
              ))}

@@ -50,3 +50,6 @@ Biblioteca de rotas:
 Custom hook
  nada mais é que uma função que retorna um hook
  mas obrigatoriamente tem que ter o nome iniciado com "use"
+
+Testes
+    Teste de fumaça/smoke test
