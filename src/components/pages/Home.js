@@ -77,7 +77,7 @@ const Home = () => {
                         </div>
                     </div>
                     <div>
-                        <video src={bmwVideo} width="100%" autoPlay loop/>
+                        <video src={bmwVideo} width="100%" autoPlay playsInline loop/>
                     </div>
                 </Grid>
                 
