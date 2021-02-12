@@ -1,5 +1,6 @@
 import React from "react";
 import {Link} from 'react-router-dom';
+import PropTypes from 'prop-types';
 import Hero from '../molecules/Hero';
 import Car1 from '../../stories/assets/car1.jpg';
 import Heading from '../atoms/Heading';
@@ -12,9 +13,9 @@ import ProductGrid from '../organisms/ProductGrid';
 import Accordion,{AccordionGroup} from '../atoms/Accordion';
 import {FaCar, FaKey, FaMapMarkedAlt, FaAccessibleIcon} from 'react-icons/fa';
 import bmwVideo from '../../assets/bmw.mp4';
-import { produto } from './db';
+import ProductType from "../../types/ProductTypes";
 
-const Home = () => (
+const Home = ({produtos}) => (
         <>
             <Hero image={Car1}>
                 <Heading>
@@ -58,7 +59,7 @@ const Home = () => (
             <Section inverse={true}>
                 <Heading>
                     <h2>Conheça nossos serviços</h2>
-                    <ProductGrid products={produto}/>
+                    <ProductGrid products={produtos}/>
                 </Heading>
             </Section>
             <Section>
@@ -100,5 +101,14 @@ const Home = () => (
             <Footer/>
         </>
 );
+
+Home.defaultProps = {
+    produtos: []
+};
+Home.PropTypes = {
+    produtos: PropTypes.arrayOf(
+        ProductType
+    )
+};
 
 export default Home;

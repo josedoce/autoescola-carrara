@@ -1,5 +1,7 @@
 import React from "react";
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
+
 import {
     FaIdCard,
     FaHome,
@@ -16,12 +18,6 @@ import Footer from '../organisms/Footer';
 import Button from '../atoms/Button';
 import Speed from '../../draws/Speed';
 import BreadCrumb from '../atoms/BreadCrumb';
-
-const items = [
-    {label: "Inicio", link: "/"},
-    {label: "Servicos"},
-    {label: "Nome do Serviço"}
-];
 
 const PinnedList = styled.ul`
     list-style: none;
@@ -40,12 +36,12 @@ const PinnedItem = styled.li`
     }
 `;
 
-const ProductDetails = () => (
+const ProductDetails = ({breadCrumb, titulo}) => (
         <>
             <Hero image={car1}>
                 <Heading>
-                    <h1>Nome do serviço</h1>
-                    <BreadCrumb items={items}/>
+                    <h1>{titulo}</h1>
+                    <BreadCrumb items={breadCrumb}/>
                 </Heading>
             </Hero>
             <Section>
@@ -93,5 +89,19 @@ const ProductDetails = () => (
             <Footer/>
         </>
 );
+
+ProductDetails.defaultProps = {
+    breadCrumb: [],
+    titulo: undefined
+};
+ProductDetails.propTypes = {
+    breadCrumb: PropTypes.arrayOf(
+        PropTypes.shape({
+            label: PropTypes.string,
+            link: PropTypes.string
+        })
+    ),
+    titulo: PropTypes.string.isRequired
+}
 
 export default ProductDetails;

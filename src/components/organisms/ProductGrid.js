@@ -7,6 +7,7 @@ import Grid from '../atoms/Grid';
 import Card,{CardMedia, CardBody} from '../atoms/Card';
 import Heading from '../atoms/Heading';
 import Button from '../atoms/Button';
+import ProductType from "../../types/ProductTypes";
 
 const Toolbar = styled.div`
     margin-top: 40px;
@@ -30,7 +31,12 @@ const ProductGrid = ({products}) => {
                             {produto.texto}
                         </p>
                         <div>
-                            <Button variant="link" color="primary" as={Link} to="/servicos">Saiba mais</Button>
+                            <Button
+                                variant="link" 
+                                color="primary" 
+                                as={Link} to={`/servicos/${produto.slug}`}>
+                                Saiba mais
+                            </Button>
                         </div>
                     </CardBody>
                 </Card>
@@ -59,12 +65,9 @@ ProductGrid.defaultProps = {
 
 ProductGrid.propTypes = {
     products: PropTypes.arrayOf(
-        PropTypes.shape({
-            id: PropTypes.oneOfType([PropTypes.number, PropTypes.string]), //aceito tanto numero como string
-            imagem: PropTypes.string,
-            titulo: PropTypes.string,
-            texto: PropTypes.string
-        })
+        PropTypes.shape(
+            ProductType
+        )
     )
 };
 
