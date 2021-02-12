@@ -13,7 +13,7 @@ import ProductGrid from '../organisms/ProductGrid';
 import Accordion,{AccordionGroup} from '../atoms/Accordion';
 import {FaCar, FaKey, FaMapMarkedAlt, FaAccessibleIcon} from 'react-icons/fa';
 import bmwVideo from '../../assets/bmw.mp4';
-import ProductType from "../../types/ProductTypes";
+import ProductType from "../../models/types/ProductTypes";
 
 const Home = ({produtos}) => (
         <>

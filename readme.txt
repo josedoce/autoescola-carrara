@@ -34,6 +34,7 @@ pacotes de desenvolvimento utilizados
     ->o @storybook/addon-docs, para uma visualização do codigo melhor
     ->o prop-types, para uma expecificação de tipos
     ->o @storybook/addon-knobs para visualização de documentação
+    ->faker para criação dinamica de dados falsos para o storybook
 pacotes utilizados
     ->styled-components, para fazer um uso adequado do css no javascript
     ->react-helmet, para fazer importação de links
@@ -57,3 +58,4 @@ Testes
 
 Rotas componentizadas
     Na pasta de rotas ficará as regras de negocio da aplicação(a logica)
+
