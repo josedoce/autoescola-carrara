@@ -9,19 +9,21 @@ import NotFoundImage from '../../draws/Undraw';
 const ProductDetails = () => {
     const item = useParams();
     const produto = useProduct({slug: item.slug});
+    useScrollToTop();
+    if(!produto){
+        return <Error 
+            titulo={"Serviço não encontrado"}
+            description={"O servico que você selecionou não existe ou não foi encontrado"}
+            image={<NotFoundImage/>}
+        />
+    }
     const items = [
         {label: "Inicio", link: "/"},
         {label: "Servicos"},
         {label: produto.titulo}
     ];
-    useScrollToTop();
-    if(!produto){
-        return <Error 
-            titulo={"Produto não encontrado"}
-            description={"O servico que você selecionou não existe ou não foi encontrado"}
-            image={<NotFoundImage/>}
-        />
-    }
+    
+    
     return(
         <ProductDetailsPage breadCrumb={items} titulo={produto.titulo}/>
     )
