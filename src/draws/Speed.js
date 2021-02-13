@@ -8,8 +8,11 @@ function SvgSpeed(props) {
       width="1em"
       height="1em"
       viewBox="0 0 1012 794"
+      aria-labelledby="aboutImgRelogio"
+      role="img"
       {...props}
     >
+      <title id="aboutImgRelogio">Imagem ilustrativa de uma mulher na frente do relogio.</title>
       <path
         d="M329.31 196.137l-119.93 99.459a54.313 54.313 0 11-83.524 69.268L18.334 454.032l172.356 207.83 310.976-257.894zM1012 497.262c0 122.84-73.026 165.73-163.108 165.73s-163.109-42.89-163.109-165.73 163.109-279.11 163.109-279.11S1012 374.421 1012 497.261z"
         fill="#f2f2f2"

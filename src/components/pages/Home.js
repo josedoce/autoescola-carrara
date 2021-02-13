@@ -105,7 +105,7 @@ const Home = ({produtos}) => (
 Home.defaultProps = {
     produtos: []
 };
-Home.PropTypes = {
+Home.propTypes = {
     produtos: PropTypes.arrayOf(
         ProductType
     )
